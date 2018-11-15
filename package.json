@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/say3no/try_graphql#readme",
   "dependencies": {
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
     "graphql": "^14.0.2"
   }
 }
