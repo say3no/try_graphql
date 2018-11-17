@@ -1,0 +1,11 @@
+{
+    "query": "{ 
+    hello
+    rollDice(numDice: 3, numSides: 6)
+    getDie(numSides: 100) {
+        rollOnce
+        roll(numRolls: 3)
+    }
+}
+"
+}

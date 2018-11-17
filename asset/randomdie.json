@@ -1,0 +1,7 @@
+{
+    "query": "{  
+    getDie(numSides: 10) {
+        roll(numRolls: 3)
+    }
+    "
+}
