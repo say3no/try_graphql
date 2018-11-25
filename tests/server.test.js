@@ -1,8 +1,8 @@
 import {
     test,
     expect
-} from 'jest';
+} from 'jest'
 
 test('first test ', () => {
-    expect(true).toBe(true);
-});
+    expect(true).toBe(true)
+})

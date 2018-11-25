@@ -1,6 +1,11 @@
-import express from 'express';
-import graphqlHTTP from 'express-graphql';
-import buildSchema from 'graphql';
+var express = require('express');
+var graphqlHTTP = require('express-graphql');
+var {
+    buildSchema
+} = require('graphql');
+
+var hoge = require('./schema.js').schema;
+console.log(hoge);
 
 var schema = buildSchema(`
   input MessageInput {
@@ -57,7 +62,7 @@ var root = {
     createMessage: ({
         input
     }) => {
-        var id = require('crypto').randomBytes(10).toString('hex');
+        var id = '123456';
 
         fakeDatabase[id] = input;
         return new Message(id, input);
