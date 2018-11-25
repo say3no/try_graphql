@@ -1,0 +1,11 @@
+{
+    "mutation": "{ 
+    createMessage(input: {
+        author: 'Andy',
+        content: 'hope is a good thing ',
+    }) {
+        id
+    }
+}
+"
+}
