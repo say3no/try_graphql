@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "node ./src/server.js",
-        "test": "jest --coverage"
+        "test": "jest"
     },
     "repository": {
         "type": "git",
@@ -18,7 +18,9 @@
     },
     "homepage": "https://github.com/say3no/try_graphql#readme",
     "dependencies": {
+        "@babel/preset-env": "^7.1.6",
         "babel": "^6.23.0",
+        "babel-preset-es2015": "^6.24.1",
         "express": "^5.0.0-alpha.7",
         "express-graphql": "^0.7.1",
         "frisby": "^2.1.0",
@@ -27,6 +29,10 @@
         "jest-runner-eslint": "^0.7.1"
     },
     "jest": {
+        "collectCoverageFrom": [
+            "src/**/*.{js,jsx}",
+            "!**/node_modules/**"
+        ],
         "collectCoverage": true,
         "bail": true,
         "verbose": true,

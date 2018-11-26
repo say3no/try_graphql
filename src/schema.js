@@ -1,6 +1,6 @@
 var {
     buildSchema
-} = require('graphql');
+} = require('graphql')
 
 var schema = buildSchema(`
   input MessageInput {
@@ -30,4 +30,4 @@ var schema = buildSchema(`
     numSides: Int!
     rollOnce: Int!
     roll(numRolls: Int!): [Int]
-  }`);
+  }`)

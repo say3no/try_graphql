@@ -1,9 +1,5 @@
 class RandomDie {
     constructor(numSide) {
-        if (numSide === undefined) {
-            console.log('aaaaaaaa')
-            throw Error('RandomDie require numSide for constructor')
-        }
         this.numSide = numSide
     }
 
