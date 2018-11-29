@@ -13,3 +13,12 @@ describe('rollOnce() Testing', () => {
         expect(typeof die.rollOnce()).toBe('number')
     })
 })
+
+describe('roll() Testing', () => {
+    test('Regulr', () => {
+        const die = new RandomDie(100)
+        console.log(die.roll())
+        console.log(die.roll())
+        expect(typeof die.roll()).toBe('number')
+    })
+})

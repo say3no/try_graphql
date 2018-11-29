@@ -4,8 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "node ./src/server.js",
-        "test": "jest"
+        "s": "node ./src/server.js",
+        "t": "jest",
+        "w": "jest --watch --verbose false"
     },
     "repository": {
         "type": "git",
