@@ -31,3 +31,5 @@ var schema = buildSchema(`
     rollOnce: Int!
     roll(numRolls: Int!): [Int]
   }`)
+
+export default schema

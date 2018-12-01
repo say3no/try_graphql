@@ -7,9 +7,7 @@ class RandomDie {
         return 1 + Math.floor(Math.random() * this.numSide)
     }
 
-    roll({
-        numRolls
-    }) {
+    roll({ numRolls }) {
         var output = []
         for (var i = 0; i < numRolls; i++) {
             output.push(this.rollOnce())

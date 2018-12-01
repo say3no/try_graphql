@@ -293,14 +293,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var express = <span class="cstat-no" title="statement not covered" >require('express');</span>
-var graphqlHTTP = <span class="cstat-no" title="statement not covered" >require('express-graphql');</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var express = <span class="cstat-no" title="statement not covered" >require('express')</span>
+var graphqlHTTP = <span class="cstat-no" title="statement not covered" >require('express-graphql')</span>
 var {
     buildSchema
-} = require('graphql');
+} = require('graphql')
 &nbsp;
-var hoge = <span class="cstat-no" title="statement not covered" >require('./schema.js').schema;</span>
-<span class="cstat-no" title="statement not covered" >console.log(hoge);</span>
+var hoge = <span class="cstat-no" title="statement not covered" >require('./schema.js').schema</span>
+<span class="cstat-no" title="statement not covered" >console.log(hoge)</span>
 &nbsp;
 var schema = <span class="cstat-no" title="statement not covered" >buildSchema(`</span>
   input MessageInput {
@@ -330,93 +330,93 @@ var schema = <span class="cstat-no" title="statement not covered" >buildSchema(`
     numSides: Int!
     rollOnce: Int!
     roll(numRolls: Int!): [Int]
-  }`);
+  }`)
 &nbsp;
 class Message {
     constructor(id, {
         content,
         author
     }) <span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >{</span></span>
-<span class="cstat-no" title="statement not covered" >        this.id = id;</span>
-<span class="cstat-no" title="statement not covered" >        this.content = content;</span>
-<span class="cstat-no" title="statement not covered" >        this.author = author;</span>
+<span class="cstat-no" title="statement not covered" >        this.id = id</span>
+<span class="cstat-no" title="statement not covered" >        this.content = content</span>
+<span class="cstat-no" title="statement not covered" >        this.author = author</span>
     }
 }
 &nbsp;
-var fakeDatabase = <span class="cstat-no" title="statement not covered" >{};</span>
+var fakeDatabase = <span class="cstat-no" title="statement not covered" >{}</span>
 &nbsp;
 var root = <span class="cstat-no" title="statement not covered" >{</span>
     getMessage: <span class="fstat-no" title="function not covered" >({</span>
         id
     }) =&gt; <span class="cstat-no" title="statement not covered" >{</span>
 <span class="cstat-no" title="statement not covered" >        if (!fakeDatabase[id]) {</span>
-<span class="cstat-no" title="statement not covered" >            throw new Error('no message exists with id ' + id);</span>
+<span class="cstat-no" title="statement not covered" >            throw new Error('no message exists with id ' + id)</span>
         }
-<span class="cstat-no" title="statement not covered" >        return new Message(id, fakeDatabase[id]);</span>
+<span class="cstat-no" title="statement not covered" >        return new Message(id, fakeDatabase[id])</span>
     },
     createMessage: <span class="fstat-no" title="function not covered" >({</span>
         input
     }) =&gt; <span class="cstat-no" title="statement not covered" >{</span>
-        var id = <span class="cstat-no" title="statement not covered" >'123456';</span>
+        var id = <span class="cstat-no" title="statement not covered" >'123456'</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        fakeDatabase[id] = input;</span>
-<span class="cstat-no" title="statement not covered" >        return new Message(id, input);</span>
+<span class="cstat-no" title="statement not covered" >        fakeDatabase[id] = input</span>
+<span class="cstat-no" title="statement not covered" >        return new Message(id, input)</span>
     },
     updateMessage: <span class="fstat-no" title="function not covered" >({</span>
         id,
         input
     }) =&gt; <span class="cstat-no" title="statement not covered" >{</span>
 <span class="cstat-no" title="statement not covered" >        if (!fakeDatabase[id]) {</span>
-<span class="cstat-no" title="statement not covered" >            throw new Error('no message exists with id ' + id);</span>
+<span class="cstat-no" title="statement not covered" >            throw new Error('no message exists with id ' + id)</span>
         }
-<span class="cstat-no" title="statement not covered" >        fakeDatabase[id] = input;</span>
-<span class="cstat-no" title="statement not covered" >        return new Message(id, input);</span>
+<span class="cstat-no" title="statement not covered" >        fakeDatabase[id] = input</span>
+<span class="cstat-no" title="statement not covered" >        return new Message(id, input)</span>
     },
     hello: <span class="fstat-no" title="function not covered" >() =&gt; </span>{
-<span class="cstat-no" title="statement not covered" >        return 'Hello world!';</span>
+<span class="cstat-no" title="statement not covered" >        return 'Hello world!'</span>
     },
     getDie: <span class="fstat-no" title="function not covered" >(</span>args) =&gt; {
-<span class="cstat-no" title="statement not covered" >        return new RandomDie(args.numSides || 6);</span>
+<span class="cstat-no" title="statement not covered" >        return new RandomDie(args.numSides || 6)</span>
     },
     rollDice: <span class="fstat-no" title="function not covered" >({</span>
         numDice,
         numSides
     }) =&gt; <span class="cstat-no" title="statement not covered" >{</span>
-        var output = <span class="cstat-no" title="statement not covered" >[];</span>
+        var output = <span class="cstat-no" title="statement not covered" >[]</span>
 <span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; numDice; i++) {</span>
-<span class="cstat-no" title="statement not covered" >            output.push(1 + Math.floor(Math.random() * (numSides || 6)));</span>
+<span class="cstat-no" title="statement not covered" >            output.push(1 + Math.floor(Math.random() * (numSides || 6)))</span>
         }
-<span class="cstat-no" title="statement not covered" >        return output;</span>
+<span class="cstat-no" title="statement not covered" >        return output</span>
     },
-};
+}
 &nbsp;
-var app = <span class="cstat-no" title="statement not covered" >express();</span>
+var app = <span class="cstat-no" title="statement not covered" >express()</span>
 <span class="cstat-no" title="statement not covered" >app.use('/', graphqlHTTP({</span>
     schema: schema,
     rootValue: root,
     grapghiql: true,
-}));
+}))
 &nbsp;
-<span class="cstat-no" title="statement not covered" >app.listen(4000);</span>
-<span class="cstat-no" title="statement not covered" >console.log('Running a GraphQL API server at localhost:4000');</span>
+<span class="cstat-no" title="statement not covered" >app.listen(4000)</span>
+<span class="cstat-no" title="statement not covered" >console.log('Running a GraphQL API server at localhost:4000')</span>
 &nbsp;
 class RandomDie {
 <span class="fstat-no" title="function not covered" >    constructor(</span>numSide) <span class="cstat-no" title="statement not covered" >{</span>
-<span class="cstat-no" title="statement not covered" >        this.numSide = numSide;</span>
+<span class="cstat-no" title="statement not covered" >        this.numSide = numSide</span>
     }
 &nbsp;
     rollOnce() {
-<span class="cstat-no" title="statement not covered" >        return 1 + Math.floor(Math.random() * this.numSide);</span>
+<span class="cstat-no" title="statement not covered" >        return 1 + Math.floor(Math.random() * this.numSide)</span>
     }
 &nbsp;
     roll({
         numRolls
     }) <span class="cstat-no" title="statement not covered" >{</span>
-        var output = <span class="cstat-no" title="statement not covered" >[];</span>
+        var output = <span class="cstat-no" title="statement not covered" >[]</span>
 <span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; numRolls; i++) {</span>
-<span class="cstat-no" title="statement not covered" >            output.push(this.rollOnce());</span>
+<span class="cstat-no" title="statement not covered" >            output.push(this.rollOnce())</span>
         }
-<span class="cstat-no" title="statement not covered" >        return output;</span>
+<span class="cstat-no" title="statement not covered" >        return output</span>
     }
 }</pre></td></tr>
 </table></pre>
@@ -424,7 +424,7 @@ class RandomDie {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Nov 28 2018 13:00:10 GMT+0900 (GMT+09:00)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Dec 01 2018 11:58:49 GMT+0900 (GMT+09:00)
 </div>
 </div>
 <script src="../prettify.js"></script>
