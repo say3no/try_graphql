@@ -1,9 +1,16 @@
 import RandomDie from '../../src/class/RandomDie'
 
 describe('Constructor Testing', () => {
-    test('No arg constructor', () => {
-        const no_con = new RandomDie()
-        expect(no_con.numSide).toBeUndefined()
+    test('irregal arg of constructor', () => {
+        expect(() => {
+            new RandomDie()
+        }).toThrow('RandomDie require number arg as numSide for constructor')
+        expect(() => {
+            new RandomDie('aaa')
+        }).toThrow('RandomDie require number arg as numSide for constructor')
+        expect(() => {
+            new RandomDie({})
+        }).toThrow('RandomDie require number arg as numSide for constructor')
     })
 })
 
