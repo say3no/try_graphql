@@ -19,9 +19,6 @@ describe('Constructor Testing', () => {
     })
 })
 
-
-
-
 describe('rollOnce() Testing', () => {
     let die
     beforeEach(() => {
@@ -58,7 +55,5 @@ describe('roll() Testing', () => {
         output.forEach(ele => {
             expect(typeof ele).toBe('number')
         })
-
-
     })
 })
