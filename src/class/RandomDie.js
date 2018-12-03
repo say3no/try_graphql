@@ -13,6 +13,9 @@ class RandomDie {
     roll({
         numRolls
     }) {
+        if (typeof numRolls !== 'number') {
+            throw Error('RandomDie.numRolls() require number { numRolls: number }')
+        }
         var output = []
         for (var i = 0; i < numRolls; i++) {
             output.push(this.rollOnce())
