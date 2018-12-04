@@ -1,8 +1,8 @@
 // idは必須項目だが、contentとauthorはなくてもいい
 class Message {
     constructor(id, {
-        content = 'Empty',
-        author = 'Toshiaki'
+        content,
+        author
     }) {
         this.id = id
         this.content = content
