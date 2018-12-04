@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1543847895927" clover="3.2.0">
-  <project timestamp="1543847895928" name="All files">
-    <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3" elements="17" coveredelements="17" complexity="0" loc="10" ncloc="10" packages="1" files="1" classes="1">
-      <file name="RandomDie.js" path="/Users/say0213/try/try_graphql/src/class/RandomDie.js">
+<coverage generated="1543848356223" clover="3.2.0">
+  <project timestamp="1543848356223" name="All files">
+    <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3" elements="19" coveredelements="19" complexity="0" loc="12" ncloc="12" packages="2" files="2" classes="2">
+      <package name="src">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="schema.js" path="/Users/say0213/try/try_graphql/src/schema.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.class">
         <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-        <line num="3" count="7" type="cond" truecount="2" falsecount="0"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="6" count="4" type="stmt"/>
-        <line num="10" count="14" type="stmt"/>
-        <line num="16" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="21" count="12" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
-      </file>
+        <file name="RandomDie.js" path="/Users/say0213/try/try_graphql/src/class/RandomDie.js">
+          <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+          <line num="3" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="4" count="3" type="stmt"/>
+          <line num="6" count="4" type="stmt"/>
+          <line num="10" count="14" type="stmt"/>
+          <line num="16" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="19" count="2" type="stmt"/>
+          <line num="20" count="2" type="stmt"/>
+          <line num="21" count="12" type="stmt"/>
+          <line num="23" count="2" type="stmt"/>
+        </file>
+      </package>
     </metrics>
   </project>
 </coverage>
