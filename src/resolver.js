@@ -3,32 +3,6 @@ import Message from './class/Message'
 
 var fakeDatabase = {}
 var resolver = {
-    getMessage: ({
-        id
-    }) => {
-        if (!fakeDatabase[id]) {
-            throw new Error('no message exists with id ' + id)
-        }
-        return new Message(id, fakeDatabase[id])
-    },
-    createMessage: ({
-        input
-    }) => {
-        var id = '123456'
-
-        fakeDatabase[id] = input
-        return new Message(id, input)
-    },
-    updateMessage: ({
-        id,
-        input
-    }) => {
-        if (!fakeDatabase[id]) {
-            throw new Error('no message exists with id ' + id)
-        }
-        fakeDatabase[id] = input
-        return new Message(id, input)
-    },
     hello: () => {
         return 'Hello world!'
     },
@@ -45,6 +19,34 @@ var resolver = {
         }
         return output
     },
+
+    createMessage: ({
+        input
+    }) => {
+        var id = '123456'
+
+        fakeDatabase[id] = input
+        return new Message(id, input)
+    },
+    getMessage: ({
+        id
+    }) => {
+        if (!fakeDatabase[id]) {
+            throw new Error('no message exists with id ' + id)
+        }
+        return new Message(id, fakeDatabase[id])
+    },
+    updateMessage: ({
+        id,
+        input
+    }) => {
+        if (!fakeDatabase[id]) {
+            throw new Error('no message exists with id ' + id)
+        }
+        fakeDatabase[id] = input
+        return new Message(id, input)
+    },
+
 }
 
 export default resolver
