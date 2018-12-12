@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">27.78% </span>
+        <span class="strong">38.89% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/18</span>
+        <span class='fraction'>7/18</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">12.5% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/8</span>
+        <span class='fraction'>1/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">16.67% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/6</span>
+        <span class='fraction'>3/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">27.78% </span>
+        <span class="strong">38.89% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/18</span>
+        <span class='fraction'>7/18</span>
       </div>
     </div>
   </div>
@@ -92,21 +92,40 @@
 47
 48
 49
-50</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+50
+51
+52</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -123,21 +142,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -146,6 +150,23 @@ import Message from './class/Message'
 &nbsp;
 var fakeDatabase = {}
 var resolver = {
+    hello: () =&gt; {
+        return 'Hello world!'
+    },
+    getDie: (args) =&gt; {
+        return new RandomDie(args.numSides || <span class="branch-1 cbranch-no" title="branch not covered" >6)</span>
+    },
+    rollDice: <span class="fstat-no" title="function not covered" >({</span>
+        numDice,
+        numSides
+    }) =&gt; {
+        var output = <span class="cstat-no" title="statement not covered" >[]</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; numDice; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            output.push(1 + Math.floor(Math.random() * (numSides || 6)))</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return output</span>
+    },
+&nbsp;
     createMessage: ({
         input
     }) =&gt; {
@@ -172,22 +193,7 @@ var resolver = {
 <span class="cstat-no" title="statement not covered" >        fakeDatabase[id] = input</span>
 <span class="cstat-no" title="statement not covered" >        return new Message(id, input)</span>
     },
-    hello: <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >        return 'Hello world!'</span>
-    },
-    getDie: <span class="fstat-no" title="function not covered" >(a</span>rgs) =&gt; {
-<span class="cstat-no" title="statement not covered" >        return new RandomDie(args.numSides || 6)</span>
-    },
-    rollDice: <span class="fstat-no" title="function not covered" >({</span>
-        numDice,
-        numSides
-    }) =&gt; {
-        var output = <span class="cstat-no" title="statement not covered" >[]</span>
-<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; numDice; i++) {</span>
-<span class="cstat-no" title="statement not covered" >            output.push(1 + Math.floor(Math.random() * (numSides || 6)))</span>
-        }
-<span class="cstat-no" title="statement not covered" >        return output</span>
-    },
+&nbsp;
 }
 &nbsp;
 export default resolver</pre></td></tr>
@@ -196,7 +202,7 @@ export default resolver</pre></td></tr>
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Dec 05 2018 12:45:52 GMT+0900 (GMT+09:00)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Dec 12 2018 23:17:14 GMT+0900 (GMT+09:00)
 </div>
 </div>
 <script src="../prettify.js"></script>

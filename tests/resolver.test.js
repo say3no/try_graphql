@@ -4,7 +4,6 @@ test('first test of resolver.test.js', () => {
     expect(true).toBe(true)
 })
 
-
 test('hello()', () => {
     expect(resolver.hello()).toBe('Hello world!')
 })
