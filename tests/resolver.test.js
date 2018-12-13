@@ -38,7 +38,7 @@ describe('Message CRUD', () => {
         }
     })
 
-    test('Regular', () => {
+    test('Regular Create', () => {
         expect(typeof retCreateMessage).toBe('object') // Message class
         expect(retCreateMessage.id).toBe('123456')
         expect(retCreateMessage.content).toBe(content)
