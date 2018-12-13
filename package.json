@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "s": "babel-node ./src/server.js  --presets babel-preset-env -x js,json",
+        "s": "babel-node ./src/server.js",
         "t": "jest --coverage --no-cache",
         "w": "jest --watch "
     },
