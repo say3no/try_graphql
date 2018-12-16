@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "s": "babel-node ./src/server.js  --presets babel-preset-env -x js,json",
+        "s": "babel-node ./src/server.js",
+        "t api": "jest --coverage --no-cache",
         "t": "jest --coverage --no-cache",
         "w": "jest --watch "
     },
@@ -34,6 +35,7 @@
         "graphql": "^14.0.2",
         "jest": "^23.6.0",
         "jest-runner-eslint": "^0.7.1",
+        "joi": "^14.3.0",
         "webpack": "^4.27.1"
     },
     "eslintConfig": {
