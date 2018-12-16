@@ -2,7 +2,11 @@
 
 [graphql](https://graphql.github.io)触ろかなっていうログ。
 
-あとついでにFrisby.jsを試す。
+## frisby
+
+resの動作をテストするため、API仕様書になるようなテストを書く。
+これにあたって、webpack->コンテナビルド->テストコードというフルーでやっていく。
+
 
 ## Before
 

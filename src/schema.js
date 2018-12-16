@@ -2,10 +2,13 @@ var {
     buildSchema
 } = require('graphql')
 
+// Mutationsはたぶん静的でない、くらいの意味合い？
 var schema = buildSchema(`
-  input MessageInput {
-    content: String
-    author: String
+  type Query {
+    getMessage(id: ID!): Message
+    hello: String
+    rollDice(numDice: Int!, numSides: Int): [Int]
+    getDie(numSides: Int): RandomDie
   }
 
   type Message {
@@ -14,11 +17,9 @@ var schema = buildSchema(`
     author: String
   }
 
-  type Query {
-    getMessage(id: ID!): Message
-    hello: String
-    rollDice(numDice: Int!, numSides: Int): [Int]
-    getDie(numSides: Int): RandomDie
+  input MessageInput {
+    content: String
+    author: String
   }
 
   type Mutation {
