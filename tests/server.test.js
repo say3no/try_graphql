@@ -12,17 +12,22 @@ test('frisby test', () => {
         .expect('status', 418)
 })
 
+// Joiをありのまま使うとこうなる。
 describe('Joi tasting', () => {
     const schema = Joi.object().keys({
         username: Joi.string().alphanum().min(3).max(30).required()
     })
-    test('hogehoge', () => {
-        Joi.validate({
-            username: 'fff'
-        }, schema) // pass
+    const test01 = {
+        username: 'fff'
+    }
+    test('Regular Test', () => {
+        Joi.validate(test01, schema) // pass
     })
 })
 
+
+// firsbyはJoiを内部で読んでいて、expectができるようになっている
+// APIを叩いたときに、そのresをテストしやすい
 describe('Posts', () => {
     test('should return all posts and first post should have comments', () => {
         return frisby.get('http://jsonplaceholder.typicode.com/posts')
@@ -53,3 +58,5 @@ describe('Posts', () => {
             })
     })
 })
+
+// 実際にserver.jsをテストすることを考えてみる。
